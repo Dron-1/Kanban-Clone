@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+}
+/* default css by browser is called "user agent stylesheet" */
+/* reset CSS */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.toolbar{
+    display: flex;
+    height: 5rem;
+    background-color: rgba(66, 66, 84,0.7);
+    align-items: center;
+}
+
+.headers{
+    position: absolute;
+    right: 2rem;
+}
+.headers a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    background-color: #424254;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.headers h3, .page-heading{
+    color: white;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.toolbar > * {
+    display: flex;
+    margin-left: 7rem;
+    align-items: center;
+}
+
+/* styling filters based on color */
+.color-filters-cont{
+    width: 18rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(66, 66, 84,1);
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+}
+
+.color{
+    height: 1.6rem;
+    width: 3rem;
+}
+
+.color:hover {
+    background-color: darkgray;
+    transition: .1s ease-in;
+}
+
+.lightpink{
+    background-color: lightpink;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.lightgreen{
+    background-color: lightgreen;
+}
+.black{
+    background-color: black;
+}
+
+/* styling action buttons */
+.button-cont{
+    /* already display is flex */
+    width: 8rem;
+    height: 3rem;
+    background-color: rgba(66, 66, 84,1);
+    
+}
+.button-cont > *{
+    color: white;
+    display: flex;
+    font-size: 2rem;
+}
+.button-cont > *:hover{
+    background-color: greenyellow;
+    transition: 0.3s ease-in;
+}
+.remove-task-btn, .add-task-btn{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main diplay area */
+/* .main-display-area{
+    position: relative;
+    margin-top: 1rem;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 3rem;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-evenly;
+} */
+.main-display-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:2rem;
+    margin-top: 2rem;
+    /* margin-left: 2rem; */
+}
+/* styling ticket containers */
+.ticket-container{
+    display: flex;
+    height: 13rem;
+    width: 15rem;
+    flex-direction: column;
+    background-color: rgba(118, 118, 181, 0.7);
+    border: 1px solid rgba(66, 66, 84,1);
+    border-radius: 4px;
+    /* overflow: auto; */
+    /* overflow-x: ; */
+}
+
+.ticket-status-color{
+    height: 10%;
+}
+
+.ticket-unique-id{
+    background-color: rgb(228, 230, 129);
+    padding: 4px;
+}
+.ticket-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow: auto;
+    background-color: rgba(118, 118, 181, 0.7);
+    padding: 4px;
+    /* overflow-wrap: normal; */
+}
+
+.ticket-text{
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    /* max-height: max-content; */
+}
+.lock-icon{
+    position: absolute;
+    right: 4px;
+    bottom: 8px
+}
+
+/* styling new task form */
+
+.new-task-form{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: lightgray;
+    height: 50vh;
+    width: 45vw;
+}
+.task-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    color: aliceblue;
+    resize: none;
+    /* background-color: lightgray; */
+    background-color: rgba(66, 66, 84,0.7);
+    outline: none;
+    width: 75%;
+}
+.task-text::placeholder{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    color: aliceblue;
+    opacity: 0.4;
+}
+.task-status-selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    background-color: rgba(66, 66, 84,1);
+}
+.task-status-selection > *:hover{
+    /* border: 2px solid white ; */
+    width: 5.6rem;
+    height: 3.4rem;
+    transition: 0.3s ease;
+}
+.color-selector{
+    height: 3rem;
+    width: 5rem;
+}
+.active{
+    border: 4px solid yellow;
+    width: 5.4rem;
+    height: 3.3rem;
+}
+
+/* || new feature - handle no tickets to display || */
+.no-tasks-display-msg > *{
+    color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
